@@ -1,0 +1,62 @@
+# FIX #5 — .dockerignore prevents COPY . . from including files that:
+#   (a) bloat the image unnecessarily, or
+#   (b) risk leaking secrets or local state into a published image.
+
+# Version control
+.git/
+.gitignore
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Secrets and local config
+.env
+.env.*
+*.key
+*.pem
+
+# Saved model artifacts — mount as a volume or pull from S3 at startup.
+# Baking large .pkl / .keras / .h5 files into the image layer makes rebuilds
+# extremely slow and prevents model updates without a full image rebuild.
+models/
+
+# Local data — mount as a volume in production.
+# Keeping data out of the image also prevents stale training data being
+# served in production after a data refresh.
+# Comment this out if you want sample data baked in for demo purposes.
+# data/
+
+# Notebooks and exploratory work
+notebooks/
+*.ipynb
+
+# Test and CI files
+tests/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDE and editor config
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# Build artefacts
+dist/
+build/
+*.egg-info/

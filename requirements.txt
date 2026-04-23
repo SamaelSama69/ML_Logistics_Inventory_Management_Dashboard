@@ -1,0 +1,34 @@
+# ── Python 3.12 compatible ────────────────────────────────────────────────────
+# TF 2.16+ separates Keras into its own package — must install keras explicitly.
+
+# API
+fastapi==0.115.12
+uvicorn==0.34.0
+pydantic==2.11.3
+
+# Data
+pandas==2.2.3
+numpy==2.0.2
+scipy==1.15.3
+
+# ML — core
+scikit-learn==1.6.1
+xgboost==2.1.4
+lightgbm==4.5.0
+statsmodels==0.14.4
+joblib==1.4.2
+
+# ML — deep learning
+tensorflow==2.18.0
+keras==3.8.0          # required separately for TF 2.16+; use `import keras` not `tensorflow.keras`
+
+# ML — routing
+ortools==9.11.4210
+
+# ML — time series
+prophet==1.1.6
+
+# Dashboard
+streamlit==1.45.0
+plotly==6.0.1
+requests==2.32.3

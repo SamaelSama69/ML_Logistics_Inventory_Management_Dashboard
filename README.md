@@ -32,7 +32,7 @@ Built to demonstrate the **full ML lifecycle**: data → feature engineering →
 ## 📸 Dashboard Preview
 
 ### 📈 Demand Forecasting — ARIMA + XGBoost Hybrid
-![Demand Forecasting](demand_forecasting-ARIMA_XGBoost.png)
+![Demand Forecasting](demand_forecasting-ARIMA+XGBoost.png)
 > 30-day demand forecast with 95% confidence intervals, 7-day moving average, and per-SKU breakdown across 200 SKUs and 146,000 records.
 
 ---
